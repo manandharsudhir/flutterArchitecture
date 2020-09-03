@@ -2,7 +2,7 @@ import 'package:stacked/stacked.dart';
 import 'package:todo/app/locator.dart';
 import 'package:todo/services/todoServices.dart';
 
-class AddTodoViewModel extends ReactiveViewModel {
+class AddTodoViewModel extends BaseViewModel {
   String _title;
   String get title => _title;
   void updateString(String value) {
@@ -17,7 +17,4 @@ class AddTodoViewModel extends ReactiveViewModel {
     _todoServices.addTodos(title);
     notifyListeners();
   }
-
-  @override
-  List<ReactiveServiceMixin> get reactiveServices => [_todoServices];
 }
