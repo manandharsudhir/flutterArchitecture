@@ -35,5 +35,6 @@ class TodoServices with ReactiveServiceMixin {
     print('adafa');
     _todoItems.value.add(TodoItemModel(
         id: _todoItems.value.length + 1, title: title, status: false));
+    notifyListeners();
   }
 }
